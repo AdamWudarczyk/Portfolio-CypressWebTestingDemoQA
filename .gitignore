@@ -1,0 +1,12 @@
+# Node modules
+node_modules/
+
+# Cypress downloads and screenshots
+cypress/downloads/
+cypress/screenshots/
+cypress/videos/
+cypress/reports/
+
+# Report merge files
+mochawesome.json
+mochawesome-report/
