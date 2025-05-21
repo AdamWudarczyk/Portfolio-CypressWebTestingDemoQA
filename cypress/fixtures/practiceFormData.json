@@ -1,0 +1,13 @@
+{
+  "firstName": "Jan",
+  "lastName": "Kowalski",
+  "userEmail": "test@exaple.com",
+  "gender": "Male",
+  "userNumber": "4563567890",
+  "dateOfBirth": "19 May,2025",
+  "subjectsContainer": "Maths",
+  "hobbies": "Sports",
+  "currentAddress": "New York, USA, 23-234, Liberty 23 st",
+  "state": "NCR",
+  "city": "Delhi"
+}
