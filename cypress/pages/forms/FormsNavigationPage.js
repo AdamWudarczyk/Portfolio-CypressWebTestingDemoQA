@@ -1,4 +1,4 @@
-class FormsNavigation {
+class FormsNavigationPage {
 
     nf_clickPracticeForms() {
         cy.get('.element-group').contains('Practice Form').click();
@@ -6,4 +6,4 @@ class FormsNavigation {
 
 }
 
-export default FormsNavigation;
+export default FormsNavigationPage;

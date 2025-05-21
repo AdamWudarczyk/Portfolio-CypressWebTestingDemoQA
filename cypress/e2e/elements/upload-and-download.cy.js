@@ -27,7 +27,7 @@ describe('Upload and Download', () => {
 
         cy.readFile('cypress/downloads/sampleFile.jpeg').should('exist');
 
-        const fileName = 'test_upload_file.png';
+        const fileName = 'test-upload-file.png';
         cy.get('#uploadFile').attachFile(fileName);
         cy.get('#uploadedFilePath')
             .should('contain', fileName);

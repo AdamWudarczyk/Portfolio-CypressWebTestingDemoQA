@@ -13,7 +13,7 @@ describe ('Web Tables',() => {
 
 
     before (() => {
-      cy.fixture('webTableFormData.json').then((data) => {
+      cy.fixture('web-table-form-data.json').then((data) => {
           testData = data;
       });
     });

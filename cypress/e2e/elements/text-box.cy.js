@@ -13,7 +13,7 @@ describe('Text Box', () => {
     const textBoxPage = new TextBoxPage();
 
     before(() => {
-        cy.fixture('textBoxData.json').then((data) => {
+        cy.fixture('text-box-data.json').then((data) => {
             testData = data;
         });
     });

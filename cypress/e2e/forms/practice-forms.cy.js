@@ -1,17 +1,17 @@
 import HomePage from '../../pages/HomePage';
-import FormsNavigation from "../../pages/forms/FormsNavigation";
-import PracticeForms from "../../pages/forms/PracticeForm";
+import FormsNavigationPage from "../../pages/forms/FormsNavigationPage";
+import PracticeForms from "../../pages/forms/PracticeFormPage";
 
 
 describe('Practice Form', () => {
     let testData;
 
     const homePage = new HomePage();
-    const formsNavigation = new FormsNavigation();
+    const formsNavigation = new FormsNavigationPage();
     const practiceForms = new PracticeForms();
 
     before(() => {
-        cy.fixture('practiceFormData.json').then((data) => {
+        cy.fixture('practice-form-data.json').then((data) => {
             testData = data;
         });
     });
@@ -32,7 +32,7 @@ describe('Practice Form', () => {
         practiceForms.nf_pf_setDateOfBirth(testData.dateOfBirth);
         cy.get('#subjectsInput').type(`${testData.subjectsContainer}{enter}`);
         cy.contains('label', testData.hobbies).click();
-        practiceForms.pf_uploadPicture('test_upload_file.png');
+        practiceForms.pf_uploadPicture('test-upload-file.png');
         cy.get('#currentAddress').type(testData.currentAddress);
         cy.get('#state').click({ force: true });
         cy.get('#react-select-3-input').should('be.visible').type(`${testData.state}{enter}`, { force: true });
@@ -50,7 +50,7 @@ describe('Practice Form', () => {
         cy.get('table').should('contain', testData.subjectsContainer);
         cy.get('table').should('contain', testData.hobbies);
         cy.get('table').should('contain', testData.currentAddress);
-        cy.get('table').should('contain.text', 'Picture').and('contain.text', 'test_upload_file.png');
+        cy.get('table').should('contain.text', 'Picture').and('contain.text', 'test-upload-file.png');
         cy.get('table').should('contain', testData.state);
         cy.get('table').should('contain', testData.city);
 
