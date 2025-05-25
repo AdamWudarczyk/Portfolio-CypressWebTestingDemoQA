@@ -18,7 +18,7 @@ describe('Browser Windows', () => {
             cy.stub(win, 'open').as('windowOpen');
         });
 
-        browserWindows.bw_clickNewTabButton();
+        browserWindows.bw_afw_clickNewTabButton();
         cy.get('@windowOpen').should('be.calledWith', '/sample');
     });
 
@@ -27,7 +27,7 @@ describe('Browser Windows', () => {
             cy.stub(win, 'open').as('windowOpen');
         });
 
-        browserWindows.bw_clickNewWindowButton();
+        browserWindows.bw_afw_clickNewWindowButton();
         cy.get('@windowOpen').should('be.calledWith', '/sample');
     });
 
@@ -36,7 +36,7 @@ describe('Browser Windows', () => {
             cy.stub(win, 'open').as('windowOpen');
         });
 
-        browserWindows.bw_clickNewWindowMessageButton();
+        browserWindows.bw_afw_clickNewWindowMessageButton();
         cy.get('@windowOpen').should('be.called');
     });
 });
